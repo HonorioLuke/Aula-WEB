@@ -1,0 +1,33 @@
+document.addEventListener('DOMContentLoaded', function() {  const titulo = document.getElementById('titulo');
+    const botaoMudarTitulo = document.getElementById('mudarTitulo');
+    const botaoAdicionar = document.getElementById('adicionarItem');
+    const botaoMudarCor = document.getElementById('mudarCor');
+    const input = document.getElementById('meuInput');
+    const resultado = document.getElementById('resultado');
+    const lista = document.getElementById('lista');
+    
+    let contador = 0;
+    const cores = ['#6366F1', '#8B5CF6', '#EC4899', '#00FF80', '#FFB800'];
+     botaoMudarTitulo.addEventListener('click', function() {
+        titulo.textContent = 'Título Mudado! 🎉';
+        titulo.style.color = '#6366F1';
+    });
+     botaoAdicionar.addEventListener('click', function() {
+        contador++;
+        const novoItem = document.createElement('li');
+        novoItem.textContent = `Item ${contador}`;
+        novoItem.style.padding = '10px';
+        novoItem.style.margin = '5px 0';
+        novoItem.style.backgroundColor = '#f0f0f0';
+        novoItem.style.borderRadius = '5px';
+        lista.appendChild(novoItem);
+    });
+     botaoMudarCor.addEventListener('click', function() {
+        const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+        document.body.style.backgroundColor = corAleatoria;
+    });
+     input.addEventListener('input', function() {
+        resultado.textContent = `Você digitou: ${input.value}`;
+    });
+    
+});
