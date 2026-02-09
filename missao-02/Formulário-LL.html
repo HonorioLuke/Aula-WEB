@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário LL - Contato</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário de Contato</h1>
+        <nav>
+            </ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Sobre-LL.html">Sobre</a></li>
+                <li><a href="Formulário-LL.html">Contato</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Bem-Vindo À Nossa Empresa</h2>
+            <p>Estamos felizes em receber seu contato. Por favor, preencha o formulário abaixo para que possamos ajudá-lo da melhor maneira possível.</p>
+        </article>
+
+        <section id="contato">
+            <h2>Entre em contato</h2>
+            <form action="/enviar" method="post">
+                <fieldset>
+                    <legend>Informações de Pessoais</legend>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="telefone">Telefone:</label><br>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mensagem</legend>
+                
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvidas">Suporte Técnico</option>
+                        <option value="sugestao">Vendas</option>
+                        <option value="suporte">Outros</option>
+                    </select>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </fieldset>
+
+                <label>
+                    <input type="checkbox" name="termos" required>
+                    Aceito os termos e condições.
+                </label>
+
+                <button type="submit">Enviar Mensagem</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TEC-LL. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
